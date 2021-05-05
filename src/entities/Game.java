@@ -30,8 +30,8 @@ public class Game implements Entity{
 		this.gameName = gameName;
 	}
 
-	public double getGamePrice() {
-		return gamePrice;
+	public double getGamePrice(Campaign campaign) {
+		return gamePrice = gamePrice - ((gamePrice * campaign.getDiscount()) / 100);
 	}
 
 	public void setGamePrice(double gamePrice) {
